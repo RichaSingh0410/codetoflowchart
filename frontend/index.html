@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Code to Flowchart Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Code → Flowchart Generator</h1>
+        <p>Convert your Python code into a visual flowchart</p>
+    </header>
+
+    <main class="main">
+
+        <!-- CODE SECTION -->
+        <section class="code-section">
+
+            <h2>Programming Code</h2>
+
+            <textarea
+                id="codeInput"
+                spellcheck="false"
+                placeholder="Enter your Python code here..."
+            >x = 10
+
+if x > 5:
+    print("Greater")
+else:
+    print("Smaller")</textarea>
+
+            <div class="buttons">
+                <button onclick="generateFlowchart()">
+                    Generate Flowchart
+                </button>
+
+                <button class="clear-btn" onclick="clearAll()">
+                    Clear
+                </button>
+            </div>
+
+            <p id="error"></p>
+
+        </section>
+
+
+        <!-- FLOWCHART SECTION -->
+        <section class="flow-section">
+
+            <div class="flow-header">
+                <h2>Flowchart</h2>
+
+                <button class="download-btn" onclick="downloadFlowchart()">
+                    Download
+                </button>
+            </div>
+
+            <div id="flowchart">
+                <div class="flow-box start">START</div>
+                <div class="arrow">↓</div>
+                <div class="flow-box process">
+                    Enter your code and click Generate
+                </div>
+                <div class="arrow">↓</div>
+                <div class="flow-box end">END</div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Code to Flowchart Generator</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
